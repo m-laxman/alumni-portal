@@ -125,9 +125,7 @@
 
                       </div>
                   </div>
-                  <div class="col-md-2">
-                      <a href="/accounts/editprofile/"><input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/></a>
-                  </div>
+                  
               </div>
               <div class="row">
                   <div class="col-md-4">
@@ -146,15 +144,24 @@
                                               <label>Username</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <p>{{ ins.username }}</p>
+                                              <p>{{ ins.username}}</p>
+
                                           </div>
                                       </div>
                                       <div class="row">
                                           <div class="col-md-6">
-                                              <label>Name</label>
+                                              <label>First Name</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <p>{{ ins.first_name }} {{ ins.last_name }}</p>
+                                              <input type="text" name="first_name" value="{{ ins.first_name }}"/>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <label>Last Name</label>
+                                          </div>
+                                          <div class="col-md-6">
+                                              <input type="text" name="last_name" value="{{ ins.last_name }}"/>
                                           </div>
                                       </div>
                                       <div class="row">
@@ -180,12 +187,15 @@
                                           <div class="col-md-6">
                                               <p>Web Developer and Designer</p>
                                           </div>
+                                          <button type="submit" class="btn btn-success btn-block form-control">Save</button>
                                       </div>
                           </div>
-                  
+
                       </div>
+
                   </div>
               </div>
+
           </form>
       </div>
 {% endblock body %}

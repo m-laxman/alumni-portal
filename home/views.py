@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from home.models import ContactUs
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def index(request):
